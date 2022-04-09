@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import ContactListComponent from './components/containers/ContactList';
+import ComponenteA from './components/ComponenteA';
+import { Contact } from './models/contact.class';
 
 function App() {
 
+  const contacto = new Contact('Jose', 'Alvarado', 'alvarado@email.com', false);
+
   return (
     <div className="App">
-      <ContactListComponent />
+      <ComponenteA 
+        contacto={contacto}
+      />
     </div>
   )
 }
